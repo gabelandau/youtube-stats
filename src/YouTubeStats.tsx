@@ -1,9 +1,15 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './pages/Home';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
+]);
+
 const YouTubeStats = () => {
-  return (
-    <div>
-      <div>Hello!</div>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default YouTubeStats;

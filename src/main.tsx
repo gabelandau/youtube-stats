@@ -4,6 +4,8 @@ import { Global, css } from '@emotion/react';
 
 import YouTubeStats from './YouTubeStats';
 
+import './assets/reset.css';
+
 const globalStyles = css`
   html {
     background-color: #121212;
