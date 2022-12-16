@@ -12,4 +12,7 @@ interface VideoMetadata {
   contentDetails?: {
     duration?: string;
   };
+  snippet: {
+    title: string;
+  }
 }
