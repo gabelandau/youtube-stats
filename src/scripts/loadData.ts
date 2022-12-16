@@ -1,9 +1,6 @@
 import { Dispatch } from 'react';
 
-const loadData = (
-  event: React.ChangeEvent<HTMLInputElement>,
-  callback: Dispatch<YouTubeVideo[]>
-) => {
+const loadData = (event: React.ChangeEvent<HTMLInputElement>, callback: Dispatch<any>) => {
   const fileReader = new FileReader();
 
   if (event.target.files) {

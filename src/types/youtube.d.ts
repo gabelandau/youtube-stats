@@ -3,3 +3,13 @@ interface YouTubeVideo {
   time: string;
   titleUrl: string;
 }
+
+interface FetchedYouTubeVideo {
+  fetchedVideo: any;
+}
+
+interface VideoMetadata {
+  contentDetails?: {
+    duration?: string;
+  };
+}

@@ -1,22 +1,13 @@
 import { useRef, ChangeEventHandler, FC } from 'react';
 
-import styled from '@emotion/styled';
+import Button from './Button';
 
 interface Props {
   onChange: ChangeEventHandler<HTMLInputElement>;
+  text: string;
 }
 
-const Button = styled.button`
-  background-color: ${(props) => props.theme.colors.gray12};
-  color: ${(props) => props.theme.colors.gray1};
-  border: none;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 0.25em 1em;
-`;
-
-const FileUpload: FC<Props> = ({ onChange }) => {
+const FileUpload: FC<Props> = ({ onChange, text }) => {
   const hiddenFileInput = useRef<HTMLInputElement>(null);
 
   const handleClick = () => {
@@ -27,14 +18,8 @@ const FileUpload: FC<Props> = ({ onChange }) => {
 
   return (
     <div>
-      <Button onClick={handleClick}>Upload</Button>
-      <input
-        ref={hiddenFileInput}
-        accept="application/json"
-        type="file"
-        onChange={onChange}
-        hidden
-      />
+      <Button onClick={handleClick}>{text}</Button>
+      <input ref={hiddenFileInput} accept="application/json" type="file" onChange={onChange} hidden />
     </div>
   );
 };

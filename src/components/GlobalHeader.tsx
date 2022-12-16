@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   height: 80px;
 `;
 
+// TODO - Implement navigation items
 const NavWrapper = styled.div`
   padding-left: 2em;
   display: flex;
@@ -28,9 +29,6 @@ const GlobalHeader = () => {
   return (
     <Wrapper>
       <h4 css={{ fontWeight: 800 }}>YouTube Stats</h4>
-      <NavWrapper>
-        <NavItem to="/">Home</NavItem>
-      </NavWrapper>
     </Wrapper>
   );
 };
