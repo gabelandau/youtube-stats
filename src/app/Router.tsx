@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './pages/Home';
+
+import Home from '../pages/Home';
 
 const router = createBrowserRouter([
   {
@@ -8,8 +9,8 @@ const router = createBrowserRouter([
   },
 ]);
 
-const YouTubeStats = () => {
+const Router = () => {
   return <RouterProvider router={router} />;
 };
 
-export default YouTubeStats;
+export default Router;
